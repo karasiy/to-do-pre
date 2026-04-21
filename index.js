@@ -51,16 +51,6 @@ function createItem(item) {
     saveTasks(updatedTasks);
   });
 
-  editButton.addEventListener("click", () => {
-    const currentText = textElement.textContent;
-    const newText = prompt("Измените текст задачи:", currentText);
-    if (newText !== null && newText.trim() !== "") {
-      textElement.textContent = newText.trim();
-      const updatedTasks = getTasksFromDOM();
-      saveTasks(updatedTasks);
-    }
-  });
-
   return clone;
 }
 
